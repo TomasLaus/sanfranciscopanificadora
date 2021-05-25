@@ -1,0 +1,150 @@
+// Variables:
+
+$colorFuente: #708090;
+$hImagen: 70vh;
+$wImagen: 45vw;
+
+.fuente__normal {
+    font-size: 1rem;
+    color: $colorFuente;
+}
+
+.fuente__titulos {
+    font-size: 3rem;
+    color: $colorFuente;
+}
+
+@mixin carousel{
+    height: 55vh; 
+    width: 65vw; 
+    border-radius: 15px; 
+    display:block; 
+    margin: 0 auto; 
+    object-fit:cover;
+}
+
+@mixin letrasCarousel{
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    color: hsl(122, 100%, 100%);
+}
+
+/* SECCION BODY Y HEADER*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #232224;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.8) 100%), url("../assets/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    font-family: 'Poppins', sans-serif !important;
+    color: $colorFuente !important;
+
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+        background-color: #131313;
+        box-shadow: 0 4px 4px 0 #3c3c3c;
+        background-size: contain;
+        background-position: top;
+    
+        .header__img {
+            max-height: 100%;
+            width: 60%;
+        }
+    
+    
+    }
+    
+    // INDEX
+    #carouselUno{
+        @include carousel();
+    }
+
+    #carouselDos{
+        @include carousel();
+    }
+    
+    #carousel__tittleUno{
+        @include letrasCarousel();
+    }
+
+    #carousel__tittleDos{
+        @include letrasCarousel();
+    }
+
+    #carousel__pUno{
+        @include letrasCarousel();
+    }
+
+    #carousel__pDos{
+        @include letrasCarousel();
+    }
+  
+    .card__tittleIndex{
+        font-weight: bold;
+        font-size: 4vh;
+    }
+
+    // Especialidades
+    .titulo__sectionEspecialidades{
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .subti__sectionEspecialidades{
+        text-align: center;
+    }
+
+    // Contacto
+    .main__conctacto {
+    
+        .tituloCont{
+            color: $colorFuente;
+            font-weight: bold;
+        }
+        
+        form{
+            text-align: center;
+            color: $colorFuente;
+        }
+        
+        input {
+            color: $colorFuente;
+            border: solid 1px #708090;
+            margin-top: 6%;
+        }
+        
+        .inputCont{
+            width: 70%;
+        }
+
+        .sectionContacto {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding-bottom: 50px;
+            border-radius: 15px;
+        }
+        
+    }
+
+    
+    
+  /* ---------------SECCION FOOTER-------------------------------*/
+    
+    footer {
+        margin-top: 10%;
+        text-align: center;
+        border-bottom: solid 1px #708090;
+        background-color: #131313;
+        @extend .fuente__normal;
+        
+    }
+    
+    
+
+}
+  
